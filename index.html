@@ -8,16 +8,13 @@
 <body>
     <p>Adib's Task Manager</p>
 
-    <input type="text" >
+    <input type="text" class="task_input">
 
-    <button class ="btn-1" onclick="
-       let buttonElement = document.querySelector('.btn-1');
-       if(buttonElement.innerText === 'Subscribe') {
-        buttonElement.innerText = 'Subscribed'
-       }
-       else {
-        buttonElement.innerText = 'Subscribe';
-       }
-    ">Subscribe</button>
+    <button onclick="
+       const taskinputElement = document.querySelector('.task_input');
+       const taskName = taskinputElement.value;
+       console.log(taskName);
+       taskinputElement.value = ''
+    ">Add</button>
 </body>
 </html>
