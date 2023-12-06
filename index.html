@@ -10,11 +10,36 @@
 
     <input type="text" class="task_input">
 
-    <button onclick="
-       const taskinputElement = document.querySelector('.task_input');
-       const taskName = taskinputElement.value;
-       console.log(taskName);
-       taskinputElement.value = ''
-    ">Add</button>
+    <input type ="date" class="date_picker">
+    <button onclick="addtask()">Add</button>
+    <div class="task__container"></div>
+     
+    <Script>
+          let tasks=[`task1`, `task2`,`task3`];
+            renderTasks()
+          
+
+          function addtask() {
+            let taskInput = document.querySelector(`.task_input`);
+            let newTask = taskInput.value;
+            taskInput.value =''
+            tasks.push(newTask)
+            renderTasks()
+          }
+
+          function renderTasks(){
+            
+            tasks.forEach(function(taskTitle){
+            let element = document.createElement(`div`);
+            element.innerText = taskTitle;
+            let taskList = document.querySelector('.task__container');
+            document.body.appendChild(element);
+          })
+          }
+          
+         
+        
+         
+    </Script>
 </body>
 </html>
