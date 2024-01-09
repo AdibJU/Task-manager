@@ -1,45 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Adib's Task Manager</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <input type="text" class="task_input">
+  <body>
+    <p>Nure's Task Manager</p>
+    <input type="text" class="task__input" />
+    <input type="date" class="date-picker" />
+    <button onclick="addTask()">Add</button>
+    <div class="tasks__container"></div>
 
-    <input type ="date" class="date_picker">
-    <button onclick="addtask()">Add</button>
-    <div class="task__container"></div>
-     
-    <Script>
-          let tasks=[`task1`, `task2`,`task3`];
-            renderTasks()
-          
-
-          function addtask() {
-            let taskInput = document.querySelector(`.task_input`);
-            let newTask = taskInput.value;
-            taskInput.value =''
-            tasks.push(newTask)
-            renderTasks()
-          }
-
-          function renderTasks(){
-            
-            tasks.forEach(function(taskTitle){
-            let element = document.createElement(`div`);
-            element.innerText = taskTitle;
-            let taskList = document.querySelector('.task__container');
-            document.body.appendChild(element);
-          })
-          }
-          
-         
-        
-         
-    </Script>
-</body>
+    <script src="/src/main.js"></script>
+  </body>
 </html>
+
+
